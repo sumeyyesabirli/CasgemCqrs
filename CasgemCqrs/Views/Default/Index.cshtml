@@ -1,4 +1,5 @@
 ﻿@model List<CasgemCqrs.Cqrs.Results.GetProductQueryResult>
+
 @{
     Layout = null;
 }
@@ -18,7 +19,7 @@
             <th>Sil</th>
             <th>Güncelle</th>
             <th>Getir</th>
-        </tr>W
+        </tr>
         @foreach (var item in Model)
         {
             <tr>
@@ -28,9 +29,9 @@
                 <td>@item.Category</td>
                 <td>@item.Price</td>
                 <td>@item.Stock</td>
-                <td><a href="/Default/DeletePoduct/@item.ProductId" class="btn btn-danger">Sil</a></td>
-                <td><a href="/Default/GetProductUpdate/@item.ProductId" class="btn btn-primary">Güncelle</a></td>
-                <td><a href="/Default/GetProduct/@item.ProductId" class="btn btn-primary">Getir</a></td>
+                <td><a href="/Default/DeleteProduct/@item.ProductId" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Default/UpdateProduct/@item.ProductId" class="btn btn-primary">Güncelle</a></td>
+                <td><a href="/Default/GetPRoduct/@item.ProductId" class="btn btn-warning">Getir</a></td>
             </tr>
         }
     </table>

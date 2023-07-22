@@ -18,7 +18,7 @@ namespace CasgemCqrs.Cqrs.Handlers
         public void Handle(UpdateProductCommand command)
         {
                var values= _context.Products.Find(command.ProductId);
-               values.Brand = command.Brand;
+                values.Brand = command.Brand;
                values.Category = command.Category;
                values.Name = command.Name;
                values.Price = command.Price;

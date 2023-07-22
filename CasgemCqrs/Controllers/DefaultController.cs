@@ -34,8 +34,7 @@ namespace CasgemCqrs.Controllers
         public IActionResult Index()
         {
             var values = _getProductQueryHandler.Handle();
-            return View(values);    
-                
+            return View(values);
         }
 
         [HttpGet]
@@ -51,21 +50,22 @@ namespace CasgemCqrs.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult DeletePoduct(RemoveProductCommand commadn)
+        public IActionResult DeleteProduct(RemoveProductCommand command)
         {
-            _removeProductCommandHandler.Handle(commadn);
+            _removeProductCommandHandler.Handle(command);
             return RedirectToAction("Index");
         }
-        public IActionResult GetProduct(GetPoductByIdQueries queries )
+
+        public IActionResult GetProduct(GetPoductByIdQueries query)
         {
-            var values = _getPoductByIdQueryHandler.Handle(queries);
+            var values = _getPoductByIdQueryHandler.Handle(query);
             return View(values);
         }
         [HttpGet]
-        public IActionResult GetProductUpdate(int id)
+        public IActionResult UpdateProduct(int id)
         {
-            var values = _getProductUpdateByIdQueryHandler.Handle(new GetProductUpdateByIdQuery(id));
-            return View(values);
+            var value = _getProductUpdateByIdQueryHandler.Handle(new GetProductUpdateByIdQuery(id));
+            return View(value);
         }
         [HttpPost]
         public IActionResult UpdateProduct(UpdateProductCommand command)

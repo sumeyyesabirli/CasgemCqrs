@@ -1,7 +1,16 @@
+using CasgemCqrs.Cqrs.Handlers;
+using CasgemCqrs.DAL;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<Context>();
+builder.Services.AddScoped<GetProductQueryHandler>();
+builder.Services.AddScoped<CreatProductCommandHandler>();
+
+
 
 var app = builder.Build();
 

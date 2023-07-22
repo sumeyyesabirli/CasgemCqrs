@@ -22,4 +22,9 @@
   </ItemGroup>
 
 
+  <ItemGroup>
+    <Folder Include="Cqrs\Queries\" />
+  </ItemGroup>
+
+
 </Project>

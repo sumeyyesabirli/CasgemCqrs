@@ -9,6 +9,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<Context>();
 builder.Services.AddScoped<GetProductQueryHandler>();
 builder.Services.AddScoped<CreatProductCommandHandler>();
+builder.Services.AddScoped<RemoveProductCommandHandler>();
 
 
 

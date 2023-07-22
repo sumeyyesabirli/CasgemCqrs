@@ -17,7 +17,7 @@
             <th>Fiyat</th>
             <th>Sil</th>
             <th>Güncelle</th>
-        </tr>
+        </tr>W
         @foreach (var item in Model)
         {
             <tr>
@@ -27,7 +27,7 @@
                 <td>@item.Category</td>
                 <td>@item.Price</td>
                 <td>@item.Stock</td>
-                <td><a href="/Default/DeleteProduct/@item.ProductId" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Default/DeletePoduct/@item.ProductId" class="btn btn-danger">Sil</a></td>
                 <td><a href="/Default/UpdateProduct/@item.ProductId" class="btn btn-primary">Güncelle</a></td>
             </tr>
         }

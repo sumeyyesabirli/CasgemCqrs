@@ -10,6 +10,9 @@ builder.Services.AddDbContext<Context>();
 builder.Services.AddScoped<GetProductQueryHandler>();
 builder.Services.AddScoped<CreatProductCommandHandler>();
 builder.Services.AddScoped<RemoveProductCommandHandler>();
+builder.Services.AddScoped<GetPoductByIdQueryHandler>();
+builder.Services.AddScoped<GetProductUpdateByIdQueryHandler>();
+builder.Services.AddScoped<UpdateProductCommandHandler>();
 
 
 
